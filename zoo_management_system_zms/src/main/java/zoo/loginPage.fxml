@@ -50,12 +50,12 @@
       </ImageView>
       <TextField fx:id="username" layoutX="265.0" layoutY="180.0" promptText="Enter User Name" style="-fx-border-color: #08a12c;" />
       <PasswordField fx:id="password" layoutX="266.0" layoutY="228.0" promptText="Enter Password" style="-fx-border-color: #7d34eb;" />
-      <Label layoutX="527.0" layoutY="380.0" prefHeight="18.0" prefWidth="180.0" text="Designed by (Ahmed Yousef)v1.0">
+      <Label layoutX="527.0" layoutY="380.0" prefHeight="18.0" prefWidth="180.0" text="Designed by (Ahmed Yousef)v0.1.0">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label layoutX="5.0" layoutY="379.0" prefHeight="18.0" prefWidth="269.0" text="Copyright © 2022-2023. ALL rights reserved">
+      <Label layoutX="5.0" layoutY="379.0" prefHeight="18.0" prefWidth="269.0" text="Copyright © 2022-2023 ZMS. ALL rights reserved">
          <font>
             <Font size="10.0" />
          </font>
