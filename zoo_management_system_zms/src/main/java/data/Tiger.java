@@ -18,8 +18,7 @@ public class Tiger extends Animal {
 
     @Override
     public String getInfo() {
-        return "The info : \n"
-                + "are African equines with distinctive black-and-white striped coats. There are \n"
+        return "The Tigers are African equines with distinctive black-and-white striped coats. There are \n"
                 + "three living species: the Grévy's zebra (Equus grevyi), plains zebra (E. quagga),\n "
                 + "and the mountain zebra (E. zebra). Zebras share the genus Equus with horses and asses\n ";
     }

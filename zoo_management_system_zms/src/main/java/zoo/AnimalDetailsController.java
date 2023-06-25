@@ -1,17 +1,14 @@
 package zoo;
 
 import java.io.IOException;
-
 import data.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-// import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-// import javafx.stage.Stage;
 
 public class AnimalDetailsController {
     @FXML
@@ -27,7 +24,7 @@ public class AnimalDetailsController {
     ImageView animalImage;
 
     @FXML
-    Label  descriptionLabel;
+    Label descriptionLabel;
 
     public void setAnimalDetails(String srarchArg) {
         if (srarchArg.equals("Lion")) {
@@ -70,13 +67,13 @@ public class AnimalDetailsController {
             specieLabel.setText(zebra.getSpecie());
             animalImage.setImage(zebra.getAnImage());
 
-        } else { 
+        } else {
             Tiger tiger = new Tiger();
             cageNumLabel.setText("unknown");
             nameLabel.setText("unknown");
             descriptionLabel.setText("This animal will be here soon.");
             specieLabel.setText("unknown");
-          
+
         }
     }
 
@@ -90,17 +87,16 @@ public class AnimalDetailsController {
         // stage.setScene(scene);
         // stage.show();
 
-        FXMLLoader searchFxmlLoader= new FXMLLoader(App.class.getResource("layouts/search.fxml"));
+        FXMLLoader searchFxmlLoader = new FXMLLoader(App.class.getResource("layouts/search.fxml"));
         Parent searchParent = searchFxmlLoader.load();
         Scene searchScene = new Scene(searchParent);
         App.secondaryStage.setScene(searchScene);
-        SearchController searchController=searchFxmlLoader.getController();
+        SearchController searchController = searchFxmlLoader.getController();
         searchController.greetingUser(LogInPageController.userName);
     }
 
     @FXML
     private void switchToHomePage(ActionEvent event) throws IOException {
-
         // FXMLLoader loader = new FXMLLoader(getClass().getResource("homePage.fxml"));
         // Parent root = loader.load();
 
@@ -109,11 +105,11 @@ public class AnimalDetailsController {
         // stage.setScene(scene);
         // stage.show();
 
-        FXMLLoader homePageFxmlLoader= new FXMLLoader(App.class.getResource("layouts/homePage.fxml"));
+        FXMLLoader homePageFxmlLoader = new FXMLLoader(App.class.getResource("layouts/homePage.fxml"));
         Parent homePageParent = homePageFxmlLoader.load();
         Scene homePageScene = new Scene(homePageParent);
         App.secondaryStage.setScene(homePageScene);
-        HomePageController homePageController=homePageFxmlLoader.getController();
+        HomePageController homePageController = homePageFxmlLoader.getController();
         homePageController.greetingUser(LogInPageController.userName);
 
     }
@@ -127,17 +123,16 @@ public class AnimalDetailsController {
         // Scene scene = new Scene(root);
         // stage.setScene(scene);
         // stage.show();
-        FXMLLoader ticketsFxmlLoader= new FXMLLoader(App.class.getResource("layouts/tickets.fxml"));
+        FXMLLoader ticketsFxmlLoader = new FXMLLoader(App.class.getResource("layouts/tickets.fxml"));
         Parent ticketsParent = ticketsFxmlLoader.load();
         Scene ticketsScene = new Scene(ticketsParent);
         App.secondaryStage.setScene(ticketsScene);
-        TicketsController ticketsController=ticketsFxmlLoader.getController();
+        TicketsController ticketsController = ticketsFxmlLoader.getController();
         ticketsController.setDate();
     }
 
     @FXML
     private void switchToLogInPage(ActionEvent event) throws IOException {
-
         // FXMLLoader loader = new FXMLLoader(getClass().getResource("logInPage.fxml"));
         // Parent root = loader.load();
 
@@ -146,10 +141,10 @@ public class AnimalDetailsController {
         // stage.setScene(scene);
         // stage.show();
 
-        FXMLLoader logInPageFxmlLoader= new FXMLLoader(App.class.getResource("layouts/logInPage.fxml"));
+        FXMLLoader logInPageFxmlLoader = new FXMLLoader(App.class.getResource("layouts/logInPage.fxml"));
         Parent logInPageParent = logInPageFxmlLoader.load();
         Scene logInPageScene = new Scene(logInPageParent);
-        App.secondaryStage.setScene(logInPageScene); 
+        App.secondaryStage.setScene(logInPageScene);
 
     }
 }
